@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 40,
     Height: 40,
     marginTop: 1
-  }, list: {
+  },
+  list: {
     width: 250,
   },
   menuButton: {
@@ -28,6 +29,13 @@ const useStyles = makeStyles((theme) => ({
   fullList: {
     width: 'auto',
   },
+  listColor: {
+    color: '#0d6759',
+    '&:hover': {
+      color: "#479586",
+      
+    },
+  }
 }))
 
 const Navbar = () => {
@@ -44,17 +52,17 @@ const Navbar = () => {
 
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
+      className={clsx(classes.list,  {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List >
         {['Home', 'Features', 'About Us'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+          <ListItem button className={classes.listColor} key={text}>
+            <ListItemText  primary={text} />
           </ListItem>
         ))}
       </List>
@@ -70,7 +78,7 @@ const Navbar = () => {
           </Typography>
           <div>
             {['right'].map((anchor) => (
-              <React.Fragment key={anchor}>
+              <React.Fragment className={classes.listColor} key={anchor}>
                 <IconButton onClick={toggleDrawer(anchor, true)} edge="start" className={classes.menuButton} color="primary" aria-label="menu">
                   <MenuIcon />
                 </IconButton>

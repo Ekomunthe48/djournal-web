@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from './theme';
 import Home from './pages/home/home';
+import Footer from './component/navbar/footer';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
         </Switch>
+        <Footer />
       </ThemeProvider>
+
     </BrowserRouter>
   )
 }

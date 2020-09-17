@@ -5,7 +5,8 @@ import Keunggulan from './component/Keunggulan'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: 460
+        border: '2px solid #000350',
+        width: "50%"
     },
     container: {
         marginTop: theme.spacing(2)
@@ -22,7 +23,7 @@ const Home = () => {
     return (
         <Container>
             <div className={classes.container}>
-                <Card className={classes.root}>
+                <Card className={classes.root} xs={6}>
                     <CardContent>
                         <Typography gutterBottom color="primary" variant="h5" component="h5">
                             Download Djournal dan dapatkan manfaatnya

@@ -6,7 +6,7 @@ import Keunggulan from './component/Keunggulan'
 const useStyles = makeStyles((theme) => ({
     root: {
         border: '2px solid #000350',
-        width: "50%"
+        width: "50%",
     },
     container: {
         marginTop: theme.spacing(2)

@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#0d6759",
         color: "#ffffff",
     },
-    align: {
-        textAlign: 'left',
-    }
 }))
 
 const components = {
@@ -64,11 +61,11 @@ const Keunggulan = (props) => {
                 <Grid item className={classes.conten} xs={gR}>
                     <Paper color="primary" className={classes.paper}>
                         <Typography >
-                            <GavelIcon />
+                            <GavelIcon style={{fontSize: "3.5rem"}}/>
                         </Typography>
                         <Typography>
                             <h4>Sesuai Peraturan</h4>
-                            <p className={classes.align}>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eum, eaque a! Modi assumenda blanditiis ducimus officiis voluptatibus distinctio! 
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
@@ -79,11 +76,11 @@ const Keunggulan = (props) => {
                 <Grid item className={classes.conten} xs={gR}>
                     <Paper color="primary" className={classes.paper}>
                         <Typography>
-                            <SentimentVerySatisfiedIcon />
+                            <SentimentVerySatisfiedIcon style={{fontSize: "3.5rem"}} />
                         </Typography>
                         <Typography>
                             <h4>Ramah Pengguna</h4>
-                            <p className={classes.align}>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eum, eaque a! Modi assumenda blanditiis ducimus officiis voluptatibus distinctio! 
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
@@ -94,11 +91,11 @@ const Keunggulan = (props) => {
                 <Grid item className={classes.conten} xs={gR}>
                     <Paper color="primary" className={classes.paper}>
                         <Typography>
-                            <MonetizationOnIcon />
+                            <MonetizationOnIcon  style={{fontSize: "3.5rem"}}/>
                         </Typography>
                         <Typography>
                             <h4>Otomatisasi Transaksi</h4>
-                            <p className={classes.align}>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eum, eaque a! Modi assumenda blanditiis ducimus officiis voluptatibus distinctio! 
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
@@ -109,11 +106,11 @@ const Keunggulan = (props) => {
                 <Grid item className={classes.conten} xs={gR}>
                     <Paper alignItems="center" className={classes.paper}>
                         <Typography>
-                            <AssessmentIcon />
+                            <AssessmentIcon style={{fontSize: "3.5rem"}} />
                         </Typography>
                         <Typography>
                             <h4>Pelaporan Realtime</h4>
-                            <p className={classes.align}>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eum, eaque a! Modi assumenda blanditiis ducimus officiis voluptatibus distinctio! 
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
@@ -125,11 +122,11 @@ const Keunggulan = (props) => {
                 <Grid item className={classes.conten} xs={gR}>
                     <Paper alignItems="center" className={classes.paper}>
                         <Typography>
-                            <LocationCityIcon />
+                            <LocationCityIcon style={{fontSize: "3.5rem"}} />
                         </Typography>
                         <Typography>
                             <h4>Jenis Usaha Lengkap</h4>
-                            <p className={classes.align}>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eum, eaque a! Modi assumenda blanditiis ducimus officiis voluptatibus distinctio! 
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.

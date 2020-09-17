@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from "react-router-dom"
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import { AppBar, Toolbar, Typography, Drawer, IconButton, Button, List, ListItem, ListItemText } from '@material-ui/core'
@@ -31,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   listColor: {
     color: '#0d6759',
+    textDecoration: 'none',
     '&:hover': {
       color: "#479586",
-      
+
     },
   }
 }))
@@ -52,7 +54,7 @@ const Navbar = () => {
 
   const list = (anchor) => (
     <div
-      className={clsx(classes.list,  {
+      className={clsx(classes.list, {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
@@ -61,9 +63,11 @@ const Navbar = () => {
     >
       <List >
         {['Home', 'Features', 'About Us'].map((text) => (
-          <ListItem button className={classes.listColor} key={text}>
-            <ListItemText  primary={text} />
-          </ListItem>
+          <Link to={`/${text}`} className={classes.listColor}>
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>

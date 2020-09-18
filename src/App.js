@@ -7,6 +7,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from './theme';
 import Home from './pages/home/home';
 import Footer from './component/navbar/footer';
+import Features from './pages/features/features';
+import About from './pages/about_us/about';
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
         <Switch>
           <Redirect from='/Home' to='/' />
           <Route exact path='/' component={Home} />
-          <Route exact path='/Features' component={Home} />
-          <Route exact path='/About us' component={Home} />
+          <Route exact path='/Features' component={Features}/>
+          <Redirect from='/About Us' to='/About' />
+          <Route exact path='/About' component={About}/>
         </Switch>
         <Footer />
       </ThemeProvider>

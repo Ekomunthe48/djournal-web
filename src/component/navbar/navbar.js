@@ -25,7 +25,11 @@ const useStyles = makeStyles((theme) => ({
     width: 250,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
+    display: 'none',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block'
+    }
   },
   fullList: {
     width: 'auto',
@@ -33,6 +37,19 @@ const useStyles = makeStyles((theme) => ({
   listColor: {
     color: '#0d6759',
     textDecoration: 'none',
+    '&:hover': {
+      color: "#479586",
+
+    },
+  },
+  textList: {
+    textAlign: 'center',
+  },
+  Navi: {
+    textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+            display: 'none'
+    },
     '&:hover': {
       color: "#479586",
 
@@ -65,7 +82,7 @@ const Navbar = () => {
         {['Home', 'Features', 'About Us'].map((text) => (
           <Link to={`/${text}`} className={classes.listColor}>
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} className={classes.textList} />
             </ListItem>
           </Link>
         ))}
@@ -82,15 +99,21 @@ const Navbar = () => {
           </Typography>
           <div>
             {['right'].map((anchor) => (
-              <React.Fragment className={classes.listColor} key={anchor}>
+              <Fragment className={classes.listColor} key={anchor}>
+              {['Home', 'Features', 'About Us'].map((text) => (
+                    <Link to={`/${text}`} className={classes.listColor}>
+                      <Button color="primary" primary={text} className={classes.Navi} >{text}</Button>
+                    </Link>
+                  ))}
                 <IconButton onClick={toggleDrawer(anchor, true)} edge="start" className={classes.menuButton} color="primary" aria-label="menu">
                   <MenuIcon />
                 </IconButton>
                 <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                   {list(anchor)}
                 </Drawer>
-              </React.Fragment>
-            ))}
+              </Fragment>
+            ))
+            }
           </div>
         </Toolbar>
       </AppBar>

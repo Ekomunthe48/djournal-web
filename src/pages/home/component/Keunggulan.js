@@ -8,7 +8,6 @@ import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfie
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
-import transitions from '@material-ui/core/styles/transitions';
 
 const useStyles = makeStyles((theme) => ({
     root: {

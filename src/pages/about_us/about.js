@@ -17,9 +17,19 @@ const useStyles = makeStyles((theme) => ({
     },
     conten: {
         margin: theme.spacing(1),
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+        }
     },
     alignItems: {
         textAlign: "center"
+    },
+    wrap: {
+        [theme.breakpoints.down('xs')]: {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            justifyItems: 'center'
+        }
     }
 }))
 
@@ -36,13 +46,13 @@ const About = () => {
                     Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
                 </p>
             </div>
-            <Grid spacing={2} justify="center" direction="column">
+            <Grid spacing={2} justify="center">
                 
                 <Typography gutterBottom variant="h5" className={classes.alignItems}>
                     Pendiri Djournal
                 </Typography>
 
-                <Grid container xs={12} justify="center" >
+                <Grid className={classes.wrap} container xs={12} justify="center" >
                     
                     <Grid xs={5} className={classes.conten}>
                         <Card className={classes.card}>

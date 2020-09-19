@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link } from "react-router-dom"
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Toolbar, Typography, Drawer, IconButton, Button, List, ListItem, ListItemText } from '@material-ui/core'
+import { Container, AppBar, Toolbar, Typography, Drawer, IconButton, Button, List, ListItem, ListItemText } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import Logo from '../../src/logo.png'
 
@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     width: 250,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
     display: 'none',
     [theme.breakpoints.down('sm')]: {
       display: 'block'
@@ -91,7 +90,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className={classes.root}>
+    <Container className={classes.root}>
       <AppBar className={classes.nav} position="static" color="inherit">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
@@ -99,7 +98,7 @@ const Navbar = () => {
           </Typography>
           <div>
             {['right'].map((anchor) => (
-              <Fragment className={classes.listColor} key={anchor}>
+              <Fragment key={anchor}>
               {['Home', 'Features', 'About Us'].map((text) => (
                     <Link to={`/${text}`} className={classes.listColor}>
                       <Button color="primary" primary={text} className={classes.Navi} >{text}</Button>
@@ -117,7 +116,7 @@ const Navbar = () => {
           </div>
         </Toolbar>
       </AppBar>
-    </div>
+    </Container>
 
   )
 };

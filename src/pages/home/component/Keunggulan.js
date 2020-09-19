@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
-import { withWidth, Grid, Paper, Typography } from '@material-ui/core'
+import { withWidth, Grid, Paper, Typography, } from '@material-ui/core'
 
 import GavelIcon from '@material-ui/icons/Gavel';
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
@@ -115,7 +115,6 @@ const Keunggulan = (props) => {
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
                             </p>
                         </Typography>
-
                     </Paper>
                 </Grid>
                 <Grid item className={classes.conten} xs={gR}>
@@ -131,7 +130,6 @@ const Keunggulan = (props) => {
                                 Reiciendis magnam porro eius repellendus, consequuntur cum rem quod asperiores nemo eligendi.
                             </p>
                         </Typography>
-
                     </Paper>
                 </Grid>
             </Grid>

@@ -5,6 +5,8 @@ import BusinessIcon from '@material-ui/icons/Business'
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail'
 
+import djurnalLogo from '../../src/4.a Djurnal Vertical PNG.png'
+
 const useStyles = makeStyles((theme) => ({
     root: {
         marginTop: theme.spacing(2),
@@ -13,9 +15,17 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'justify',
         marginBottom: theme.spacing(1),
+        [theme.breakpoints.down('sm')]: {
+            display: 'grid'
+        }
     },
     icon: {
         marginRight: theme.spacing(3),
+    },
+    djurnal: {
+        width: 150,
+        height: 100,
+        marginBottom: theme.spacing(1)
     }
 }))
 const Contact = () => {
@@ -27,9 +37,14 @@ const Contact = () => {
             </div>
             <Container>
                 <Grid className={classes.root}>
+                    <img
+                        className={classes.djurnal}
+                        src={djurnalLogo}
+                        alt="DJURNAL"
+                    />
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}> 
-                            <BusinessIcon style={{fontSize: "2rem"}} />
+                        <Grid className={classes.icon}>
+                            <BusinessIcon style={{ fontSize: "2rem" }} />
                         </Grid>
                         <Grid>
                             <h4>Alamat</h4>
@@ -37,8 +52,8 @@ const Contact = () => {
                         </Grid>
                     </Grid>
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}> 
-                            <PhoneIcon style={{fontSize: "2rem"}}/>
+                        <Grid className={classes.icon}>
+                            <PhoneIcon style={{ fontSize: "2rem" }} />
                         </Grid>
                         <Grid>
                             <h4>Telepon</h4>
@@ -46,8 +61,8 @@ const Contact = () => {
                         </Grid>
                     </Grid>
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}> 
-                            <MailIcon style={{fontSize: "2rem"}}/>
+                        <Grid className={classes.icon}>
+                            <MailIcon style={{ fontSize: "2rem" }} />
                         </Grid>
                         <Grid>
                             <h4>Email</h4>

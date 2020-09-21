@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Button, Container, Grid, IconButton, makeStyles } from '@material-ui/core';
+import { Button, Container, Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
 import Linke from '@material-ui/core/Link'
 import { Link } from "react-router-dom"
 
@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     play2: {
         maxWidth: 127,
         maxHeight: 44,
-        marginTop: 10,
         transition: 'ease 0.4s',
         '&:hover': {
             transform: 'scale(0.9)',
@@ -120,6 +119,7 @@ const Footer = () => {
                                 <IconButton className={classes.sosialIcon}> <TwitterIcon /> </IconButton>
                             </div>
                         </div>
+                        <Typography variant="h6" color="primary">Tunggu apa lagi download sekarang di :</Typography>
                         <Linke href="https://play.google.com/" >
                             <img
                                 className={classes.play2}

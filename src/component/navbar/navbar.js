@@ -8,7 +8,7 @@ import Logo from '../../src/logo.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flex: 1
+    flex: 1,
   },
   nav: {
     boxShadow: 'none'
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1
   },
   logo: {
-    maxWidth: 40,
+    maxWidth: 109,
     Height: 40,
     marginTop: 1
   },
@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     width: 'auto',
   },
   listColor: {
-    color: '#0d6759',
+    color: '#fafafa',
     textDecoration: 'none',
     '&:hover': {
-      color: "#479586",
+      color: "#c7c7c7",
 
     },
   },
@@ -53,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#479586",
 
     },
+  },
+  drawer: {
+    backgroundColor: '#0d6759'
   }
 }))
 
@@ -99,7 +102,7 @@ const Navbar = () => {
           <div>
             {['right'].map((anchor) => (
               <Fragment key={anchor}>
-              {['Home', 'Features', 'About Us'].map((text) => (
+                  {['Home', 'Features', 'About Us'].map((text) => (
                     <Link to={`/${text}`} className={classes.listColor}>
                       <Button color="primary" primary={text} className={classes.Navi} >{text}</Button>
                     </Link>
@@ -107,7 +110,7 @@ const Navbar = () => {
                 <IconButton onClick={toggleDrawer(anchor, true)} edge="start" className={classes.menuButton} color="primary" aria-label="menu">
                   <MenuIcon />
                 </IconButton>
-                <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+                <Drawer classes={{ paper: classes.drawer}} anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                   {list(anchor)}
                 </Drawer>
               </Fragment>

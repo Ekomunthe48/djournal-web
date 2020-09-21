@@ -1,9 +1,20 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
 
-import Friendly from '../../../src/3198.jpg'
+import Friendly from '../../../src/—Pngtree—good feedback concept for customer_5071724.png'
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridGap: '10px',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            justifyContent: 'center'
+        }
+
+    },
     img: {
         width: '100%',
         height:'100%',
@@ -11,6 +22,13 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: 500,
         float: 'left',
         marginRight: 10,
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '100%',
+            maxHeight: '100%',
+        }
+    },
+    title: {
+        textAlign: 'center'
     }
 
 }))
@@ -19,17 +37,19 @@ const useStyles = makeStyles((theme) => ({
 const Two = () => {
     const classes = useStyles()
     return (
-        <Grid>
+        <Grid className={classes.root}>
             <Grid>
                 <img className={classes.img} src={Friendly} alt="friendly" />
             </Grid>
             <Grid>
-                <h1> Ramah Pengguna </h1>
+                <h1 className={classes.title}> Ramah Pengguna </h1>
                 <p>
                     Mudah didapatkan karna sudah tersedia di playstore, 
                     tampilan sederhana dan menarik sehingga pengguna dapat dengan mudah menggunakannya,
                     serta terintergrasi dengan sistem cloud sehingga data aman dan tidak hilang.
                 </p>
+                
+                
             </Grid>
 
         </Grid>

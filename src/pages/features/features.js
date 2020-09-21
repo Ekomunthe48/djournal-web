@@ -51,9 +51,9 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        flexGrow: 1,
+        width: '100%',
         boxShadow: 'none',
-        display: 'grid',
-        justifyContent: 'center',
         textAlign: 'justify'
     }
 }))

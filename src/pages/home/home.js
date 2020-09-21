@@ -22,7 +22,12 @@ const useStyles = makeStyles((theme) => ({
     play: {
         maxWidth: 127,
         maxHeight: 44,
-        marginTop: 10
+        marginTop: 10,
+        transition: 'ease 0.4s',
+        '&:hover': {
+            transform: 'scale(0.9)',
+            opacity: 0.5, 
+        }
     }
 }))
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
 
-import Friendly from '../../../src/—Pngtree—good feedback concept for customer_5071724.png'
+import Friendly from '../../../src/undraw_mobile_web_2g8b.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -48,8 +48,6 @@ const Two = () => {
                     tampilan sederhana dan menarik sehingga pengguna dapat dengan mudah menggunakannya,
                     serta terintergrasi dengan sistem cloud sehingga data aman dan tidak hilang.
                 </p>
-                
-                
             </Grid>
 
         </Grid>

@@ -80,7 +80,7 @@ const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List >
-        {['Home', 'Features', 'About Us'].map((text) => (
+        {['Home', 'Features', 'Blog', 'About Us'].map((text) => (
           <Link to={`/${text}`} className={classes.listColor}>
             <ListItem button key={text}>
               <ListItemText primary={text} className={classes.textList} />
@@ -101,7 +101,7 @@ const Navbar = () => {
           <div>
             {['right'].map((anchor) => (
               <Fragment key={anchor}>
-                  {['Home', 'Features', 'About Us'].map((text) => (
+                  {['Home', 'Features', 'Blog', 'About Us' ].map((text) => (
                     <Link to={`/${text}`} className={classes.listColor}>
                       <Button color="primary" primary={text} className={classes.Navi} >{text}</Button>
                     </Link>

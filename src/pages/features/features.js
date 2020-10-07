@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, makeStyles, useTheme, Paper, Tabs, Tab, Typography, Box } from '@material-ui/core';
+import { Container, makeStyles, useTheme, Paper, Tabs, Tab, Typography, Box} from '@material-ui/core';
 import PropTypes from 'prop-types'
 import SwipeableViews from 'react-swipeable-views'
 
@@ -55,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         boxShadow: 'none',
         textAlign: 'justify'
+    },
+    headMedia: {
+        flexGrow: 1,
+        width: '100%',
+    },
+    title: {
+        marginTop: 10,
+        marginBottom: 10,
     }
 }))
 
@@ -74,7 +82,7 @@ const Features = () => {
     return (
         <div>
             <Container>
-                <div>
+                <div className={classes.title}>
                     <h1>Features</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.

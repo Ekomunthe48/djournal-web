@@ -12,31 +12,37 @@ import About from './pages/about_us/about';
 import Term from './pages/term_condition/term';
 import Contact from './pages/contact_us/contact';
 import Faq from './pages/faq/faq';
+import Blog from './pages/blog/blog';
+import News from './pages/blog/content/news';
 
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Navbar />
-        <Switch>
-          <Redirect from='/Home' to='/' />
-          <Route exact path='/' component={Home} />
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Redirect from='/Home' to='/' />
 
-          <Route exact path='/Features' component={Features}/>
+            <Route exact path='/Features' component={Features} />
 
-          <Redirect from='/About Us' to='/About' />
-          <Route exact path='/About' component={About}/>
+            <Route exact path='/Blog' component={Blog} />
+            
+            <Route exact path='/About' component={About}/>
+            <Redirect from='/About Us' to='/About' />
 
-          <Redirect from='/Terms & Conditions' to='/Term' />
-          <Route exact path='/Term' component={Term}/>
+            <Route exact path='/Term' component={Term}/>
+            <Redirect from='/Terms & Conditions' to='/Term' />
 
-          <Redirect from='/Contact Us' to='/Contact' />
-          <Route exact path='/Contact' component={Contact}/>
+            <Route exact path='/Contact' component={Contact}/>
+            <Redirect from='/Contact Us' to='/Contact' />
 
-          <Route exact path='/FAQ' component={Faq}/>
-        </Switch>
-        <Footer />
+            <Route exact path='/FAQ' component={Faq}/>
+
+            <Route exact path='/blog/news' component={News} />
+          </Switch>
+          <Footer />
       </ThemeProvider>
 
     </BrowserRouter>

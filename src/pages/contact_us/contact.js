@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
-import { Container, Grid, makeStyles } from '@material-ui/core';
+import { Box, Button, Container, Grid, makeStyles, TextField, Typography } from '@material-ui/core';
 
-import BusinessIcon from '@material-ui/icons/Business'
-import PhoneIcon from '@material-ui/icons/Phone';
-import MailIcon from '@material-ui/icons/Mail'
-
-import djurnalLogo from '../../src/4.a Djurnal Vertical PNG.png'
+import djurnalLogo from '../../src/9.c Mockup.jpg'
+import { CenterFocusStrong } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(2),
+        margin: theme.spacing(5),
+        textAlign: 'center',
     },
     display: {
         display: 'flex',
@@ -26,50 +24,70 @@ const useStyles = makeStyles((theme) => ({
         width: 150,
         height: 100,
         marginBottom: theme.spacing(1)
+    },
+    title: {
+        marginBottom: theme.spacing(2),
+        display: 'flex',
+        height: 500,
+        maxHeight: '100%',
+        flexDirection: 'column',
+        background: '#479586 url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80) center center no-repeat',
+        backgroundBlendMode: 'multiply',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80)',
+        backgroundSize: 'cover',
+        position: 'relative',
+        textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#fafafa',
+        
     }
 }))
 const Contact = () => {
     const classes = useStyles()
     return (
         <Fragment>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.56327152454!2d106.8718253140276!3d-6.189147995519348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f48f975dcb11%3A0xc1176b766df1697e!2sGreen%20Pramuka%20Square%20Mall!5e0!3m2!1sen!2sid!4v1600573543679!5m2!1sen!2sid" width="100%" height="450" frameborder="0" title="office" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
             <Container>
-                <Grid className={classes.root}>
-                    <img
-                        className={classes.djurnal}
-                        src={djurnalLogo}
-                        alt="DJURNAL"
-                    />
+                <Grid className={classes.root} alignContent="center">
+                    <Box className={classes.title} >
+                        <Typography  align="center" variant="h3">
+                            Contact Us
+                        </Typography>
+                        <Typography  align="center" variant="subtitle1">
+                            Silahkan sampaikan pesan anda disini , karna kritik dan masukan anda sangat diperlukan untuk membangun Djurnal menjadi lebih baik
+                        </Typography>
+                    </Box>
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}>
-                            <BusinessIcon style={{ fontSize: "2rem" }} />
-                        </Grid>
-                        <Grid>
-                            <h4>Alamat</h4>
-                            <p>Jl. Rw. Jaya No.49, Rawasari, Kec. Cemp. Putih, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10570</p>
-                        </Grid>
+                        <TextField
+                            id="outlined-secondary"
+                            label="Name"
+                            fullWidth="true"
+                            variant="outlined"
+                            color="secondary"
+                        />
                     </Grid>
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}>
-                            <PhoneIcon style={{ fontSize: "2rem" }} />
-                        </Grid>
-                        <Grid>
-                            <h4>Telepon</h4>
-                            <p>+62812-3456-7890</p>
-                        </Grid>
+                        <TextField
+                            id="outlined-secondary"
+                            label="Email"
+                            fullWidth="true"
+                            variant="outlined"
+                            color="secondary"
+                        />
                     </Grid>
                     <Grid className={classes.display}>
-                        <Grid className={classes.icon}>
-                            <MailIcon style={{ fontSize: "2rem" }} />
-                        </Grid>
-                        <Grid>
-                            <h4>Email</h4>
-                            <p>info@djurnal.id</p>
-                        </Grid>
+                        <TextField
+                            id="outlined-secondary"
+                            label="Pesan"
+                            multiline
+                            rows={10}
+                            fullWidth="true"
+                            size="medium"
+                            variant="outlined"
+                            color="secondary"
+                        />
                     </Grid>
-                    <div></div>
+                    <Button  variant="contained" color='primary' fullWidth={true}>Kirim</Button>
                 </Grid>
             </Container>
 

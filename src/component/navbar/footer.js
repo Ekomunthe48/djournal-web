@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Button, Container, Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
+import { Button, Container, Divider, Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
 import Linke from '@material-ui/core/Link'
 import { Link } from "react-router-dom"
 
@@ -102,6 +102,7 @@ const Footer = () => {
     return (
         <Fragment>
             <Container className={classes.root}>
+                <Divider />
                 <Grid className={classes.footerContent}>
                     <div className={classes.footerBar}>
                         {['Contact Us', 'FAQ', 'Terms & Conditions'].map((text) => (
@@ -112,14 +113,14 @@ const Footer = () => {
                     </div>
                     <div className={classes.play}>
                         <div className={classes.follow}>
-                            <h4 className={classes.flwTitle}>Ikuti kami di</h4>
+                            <Typography variant="subtitle1" className={classes.flwTitle}>Ikuti kami di</Typography>
                             <div className={classes.sosial}>
                                 <IconButton className={classes.sosialIcon}> <FacebookIcon /> </IconButton>
                                 <IconButton className={classes.sosialIcon}> <InstagramIcon /> </IconButton>
                                 <IconButton className={classes.sosialIcon}> <TwitterIcon /> </IconButton>
                             </div>
                         </div>
-                        <Typography variant="h6" color="primary">Tunggu apa lagi download sekarang di :</Typography>
+                        <Typography variant="subtitle1" color="primary">Tunggu apa lagi download sekarang di :</Typography>
                         <Linke href="https://play.google.com/" >
                             <img
                                 className={classes.play2}

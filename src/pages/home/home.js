@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
-import { Card, CardContent, CardMedia, Container, Grid, Link, Typography } from '@material-ui/core'
+import { Card, CardContent, Container, Grid, Link, Divider, Typography, Fade } from '@material-ui/core'
 import Keunggulan from './component/Keunggulan'
 
 import gPlay from '../../src/google-play-badge (1).png'
 import phone from '../../src/—Pngtree—smartphone in hand, isolated on_3698286.png'
+import Simpabout from './component/simpAbout';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     play: {
-        width: 127,
-        height: 44,
+        maxWidth: 323,
+        maxHeight: 125,
         marginTop: 10,
         transition: 'ease 0.4s',
         '&:hover': {
@@ -41,7 +42,13 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
-        }
+            maxWidth: '161.5px',
+            maxHeight: '62.5px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            height: '100%'
+        },
     },
     header: {
         display: 'grid',
@@ -58,10 +65,10 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             left: 0,
             top: 0,
-        }, 
+        },
         [theme.breakpoints.down('sm')]: {
             transform: 'none',
-        } 
+        }
     },
     phone: {
         width: '100%',
@@ -84,31 +91,41 @@ const Home = () => {
     return (
         <Container>
             <div className={classes.container}>
+                <header>
                 <Grid className={classes.header} xs={12}>
-                    <Grid className={classes.card}>
-                        <Card className={classes.root}>
-                            <CardContent>
-                                <Typography gutterBottom color="primary" variant="h5" component="h5">
-                                    Download Djournal dan dapatkan manfaatnya
+                    <Fade in={true} timeout={800}>
+                        <Grid className={classes.card}>
+                            <Card className={classes.root}>
+                                <CardContent>
+                                    <Typography gutterBottom color="primary" variant="h5" component="h5">
+                                        Download Djournal dan dapatkan manfaatnya
                                 </Typography>
-                                <Typography gutterBottom variant="caption">
-                                    Djournal merupakan aplikasi yang membantu dalam pengelolaan BUMDES
+                                    <Typography gutterBottom variant="caption">
+                                        Djournal merupakan aplikasi yang membantu dalam pengelolaan BUMDES
                                 </Typography>
-                            </CardContent>
-                            <Link className={classes.linkAlign} href="https://play.google.com/">
+                                </CardContent>
+                                <Link className={classes.linkAlign} href="https://play.google.com/">
                                     <img
                                         alt="play"
                                         className={classes.play}
                                         src={gPlay}
                                     />
                                 </Link>
-                        </Card>
-                    </Grid>
-                    <Grid justify="center">
-                        <img className={classes.phone} src={phone} alt="djurnal" />
-                    </Grid>
+                            </Card>
+                        </Grid>
+                    </Fade>
+                    <Fade in={true} timeout={1000}>
+                        <Grid justify="center">
+                            <img className={classes.phone} src={phone} alt="djurnal" />
+                        </Grid>
+                    </Fade>
                 </Grid>
+
+                </header>
+                <section>
+                <Simpabout />
                 <Keunggulan />
+                </section>
             </div>
         </Container>
     );

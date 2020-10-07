@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
 
-import Report from '../../../src/—Pngtree—illustration market analytic , can_4355328.png'
+import Report from '../../../src/undraw_report_mx0a.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
